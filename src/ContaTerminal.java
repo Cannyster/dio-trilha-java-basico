@@ -1,16 +1,16 @@
-package model;
 
-public class Conta {
+
+public class ContaTerminal {
 
 	private int numero;
 	private String agencia;
 	private String nomeCliente;
 	private Double saldo;
 	
-	public Conta() {
+	public ContaTerminal() {
 	}
 
-	public Conta(int numero, String agencia, String nomeCliente, Double saldo) {
+	public ContaTerminal(int numero, String agencia, String nomeCliente, Double saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
 		this.nomeCliente = nomeCliente;
