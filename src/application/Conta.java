@@ -1,16 +1,17 @@
+package application;
 
-
-public class ContaTerminal {
+public class Conta{
 
 	private int numero;
 	private String agencia;
 	private String nomeCliente;
 	private Double saldo;
 	
-	public ContaTerminal() {
+	public Conta() {
+		this.saldo = 0.0;
 	}
 
-	public ContaTerminal(int numero, String agencia, String nomeCliente, Double saldo) {
+	public Conta(int numero, String agencia, String nomeCliente, Double saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
 		this.nomeCliente = nomeCliente;
@@ -45,19 +46,19 @@ public class ContaTerminal {
 		return saldo;
 	}
 
-	public void deposito(Double valor) {
+	public void depositar(Double valor) {
 		this.saldo += valor;
 	}
 	
-	public void saque(Double valor) {
+	public void sacar(Double valor) {
 		this.saldo -= valor;
 	}
 
 	@Override
 	public String toString() {
 		return "Olá " + this.nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + this.agencia +
-				", conta " + this.numero + ", seu saldo " + this.saldo + ", já está disponível para saque.";
+				", conta " + this.numero + ", seu saldo R$" + String.format("%.2f", this.saldo) + ", já está disponível para saque.";
 	}	
 	
-	
 }
+
